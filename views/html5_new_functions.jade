@@ -1,0 +1,256 @@
+//
+   Created by liuhong on 2016/11/26.
+
+doctype html
+html(manifest="../demo_html.appcache")
+head
+    meta(charset="utf-8")
+    title html5
+    link(rel='stylesheet', href='../stylesheets/html5.css')
+body
+    //canvas的使用
+    p.title Canvas练习
+    canvas#myCanvas(width="640px" height="500px" style="box-shadow: 4px 4px 12px #333;display: block;margin:20px auto")
+
+    //web存储
+    div.loginMsgdiv
+        p.title Web存储练习
+        div.loginInput
+            label 用户名/邮箱
+            input#user(type="text",name="user")
+        div.loginInput
+            label 密码
+            input#password(type="text",name="pass")
+        input#doLogin(type="submit",value="localStorage")
+        input#doLogin2(type="submit",value="sessionStorage")
+
+    //html拖拽
+    p.title html5拖拽功能练习
+    div.left
+        img#img(src="../images/jet.png" width="40px" height="20px")
+    div.right
+
+    //web sql数据库
+    p.title web sql操纵练习
+    div#status(name="status") web sql连接情况
+
+    p.title 图像叠加
+    div.mixture
+
+    script(type="text/javascript").
+        (function(){
+            //canvas_part
+            var it = document.getElementById("myCanvas");
+            var myCanvas = it.getContext("2d");
+            myCanvas.arc(320, 225, 200, 0, 2 * Math.PI);
+            var myPen = myCanvas.createRadialGradient(320, 225, 140, 320, 225, 200);
+            myPen.addColorStop(0, "#f0e720");
+            myPen.addColorStop(1, "#ffca3c");
+            myCanvas.fillStyle = myPen;
+            myCanvas.fill();
+            //嘴
+            myCanvas.beginPath();
+            myCanvas.arc(320, 225, 140, 0, 1 * Math.PI);
+            myCanvas.fillStyle = "#7f2e00";
+            myCanvas.fill();
+            myCanvas.beginPath();
+            myCanvas.arc(320, 215, 140, 0, 1 * Math.PI);
+            myCanvas.fillStyle = "#f0e720";
+            myCanvas.fill();
+            //左边眉毛
+            myCanvas.beginPath();
+            myCanvas.moveTo(162, 78);
+            myCanvas.quadraticCurveTo(189, 22, 235, 95);
+            myCanvas.quadraticCurveTo(194, 44, 162, 78);
+            myCanvas.fillStyle = "#000";
+            myCanvas.fill();
+            myCanvas.stroke();
+            myCanvas.closePath();
+            //右边眉毛
+            myCanvas.beginPath();
+            myCanvas.moveTo(472, 78);
+            myCanvas.quadraticCurveTo(445, 22, 399, 95);
+            myCanvas.quadraticCurveTo(448, 44, 472, 78);
+            myCanvas.fill();
+            myCanvas.stroke();
+            myCanvas.closePath();
+            //左眼
+            myCanvas.lineWidth = 5;
+            myCanvas.strokeStyle = "#75291c";
+            myCanvas.beginPath();
+            myCanvas.moveTo(136, 127);
+            myCanvas.bezierCurveTo(176, 100, 226, 100, 266, 127);
+            myCanvas.bezierCurveTo(272, 134, 268, 146, 256, 147);
+            myCanvas.bezierCurveTo(226, 124, 176, 124, 140, 147);
+            myCanvas.bezierCurveTo(126, 142, 126, 134, 136, 127);
+            myCanvas.stroke();
+            myCanvas.fillStyle = "#fff";
+            myCanvas.fill();
+
+            myCanvas.beginPath();
+            myCanvas.fillStyle = "#333";
+            myCanvas.arc(156, 128, 16, 0, 2 * Math.PI, true);
+            myCanvas.fill();
+            myCanvas.closePath();
+            //右眼
+            myCanvas.beginPath();
+            myCanvas.moveTo(372, 127);
+            myCanvas.bezierCurveTo(412, 100, 462, 100, 502, 127);
+            myCanvas.bezierCurveTo(508, 134, 504, 146, 492, 147);
+            myCanvas.bezierCurveTo(462, 124, 412, 124, 376, 147);
+            myCanvas.bezierCurveTo(362, 142, 362, 134, 372, 127);
+            myCanvas.stroke();
+            myCanvas.fillStyle = "#fff";
+            myCanvas.fill();
+
+            myCanvas.beginPath();
+            myCanvas.fillStyle = "#333";
+            myCanvas.arc(392, 128, 16, 0, 2 * Math.PI, true);
+            myCanvas.fill();
+            myCanvas.closePath();
+
+            //脸颊
+            myCanvas.beginPath();
+            myCanvas.strokeStyle = "#fd9100";
+            myCanvas.fillStyle = "#fd9100";
+            EllipseTwo(myCanvas, 200, 160, 26, 12);
+            myCanvas.fill();
+            myCanvas.stroke();
+
+            myCanvas.beginPath();
+            myCanvas.strokeStyle = "#fd9100";
+            myCanvas.fillStyle = "#fd9100";
+            EllipseTwo(myCanvas, 436, 160, 26, 12);
+            myCanvas.fill();
+            myCanvas.stroke();
+
+
+            function EllipseTwo(context, x, y, a, b) {
+                context.save();
+                var r = (a > b) ? a : b;
+                var ratioX = a / r;
+                var ratioY = b / r;
+                context.scale(ratioX, ratioY);
+                context.beginPath();
+                context.arc(x / ratioX, y / ratioY, r, 0, 2 * Math.PI, false);
+                context.closePath();
+                context.restore();
+                context.stroke();
+            }
+
+            //web存储
+            function initial() {
+                //获取元素
+                btnSave = document.getElementById('doLogin');
+                btnShow = document.getElementById('doLogin2');
+                //绑定事件
+                btnSave.addEventListener("click", btnSave_click, false);
+                btnShow.addEventListener("click", btnShow_click, false);
+            }
+
+            function btnSave_click() {
+                var key = document.getElementById('user').value;
+                var value = document.getElementById('password').value;
+                //保存进localStorage
+                localStorage.setItem(key, value);
+                window.alert("保存成功!");
+            }
+
+            function btnShow_click() {
+                var key = document.getElementById('user').value;
+                var value = document.getElementById('password').value;
+                //保存进localStorage
+                sessionStorage.setItem(key, value);
+                window.alert("保存成功!");
+            }
+
+            window.addEventListener("load", initial, false);
+
+            //html5拖拽
+            //为img绑定事件:
+            //1、开始拖拽时:dragstart
+            //2、拖拽过程中:drag
+            //3、结束拖拽:dragend
+
+            //为right绑定事件(目标元素)
+            //1、第一次进入到目标元素:dragenter
+            //2、在目标元素内移动:dragover
+            //3、投放:drop
+            //4、源元素移出目标元素:dragleave
+            var img=document.getElementsByTagName('img')[0];
+            var right=document.getElementsByClassName('right')[0];
+            img.addEventListener("dragstart", img_dragstart, false);
+            img.addEventListener("drag", img_drag, false);
+            img.addEventListener("dragend", img_dragend, false);
+
+            right.addEventListener("dragenter", tarDiv_dragenter, false);
+            right.addEventListener("dragover", tarDiv_dragover, false);
+            right.addEventListener("drop", tarDiv_drop, false);
+            right.addEventListener("dragleave", tarDiv_dragleave, false);
+            function tarDiv_dragleave(e) {
+                e.preventDefault();
+            }
+
+            function tarDiv_drop(e) {
+                var src=e.dataTransfer.getData("text");
+                var img = new Image();
+                img.src = src;
+                e.target.appendChild(img);
+                //清空dataTransfer中的数据
+                e.preventDefault();
+            }
+
+            function tarDiv_dragover(e) {
+                e.preventDefault();
+            }
+
+            function tarDiv_dragenter(e) {
+                e.preventDefault();
+            }
+
+            function img_dragstart(e) {
+                //阻止默认操作
+                //e.preventDefault();
+
+
+                //获取图像路径
+                var imgSrc = e.target.src;
+                //设置鼠标图像
+                e.dataTransfer.setDragImage(e.target, 0, 0);
+            }
+
+            function img_drag(e) {
+            }
+
+            function img_dragend() {
+            }
+
+
+            //web sql数据库
+            var db = openDatabase('zcool', '1.0', 'web sql test', 2 * 1024 * 1024);
+            var msg;
+
+            db.transaction(function (tx) {
+                tx.executeSql('drop table if exists user');
+                tx.executeSql('create table if not exists user (id unique, name,password)');
+                tx.executeSql('insert into user (id,name,password) VALUES ("01", "liuhong","123456")');
+                tx.executeSql('insert into user (id,name,password) VALUES ("02", "liuhong2","123456")');
+                msg = '<p>数据表已创建，且插入了2条数据。</p>';
+                document.querySelector('#status').innerHTML = msg;
+            });
+
+            db.transaction(function (tx) {
+                tx.executeSql('select * from user', [], function (tx, results) {
+                    var len = results.rows.length, i;
+                    msg = "<p>查询记录条数: " + len + "</p>";
+                    document.querySelector('#status').innerHTML += msg;
+
+                    for (i = 0; i < len; i++) {
+                        msg = "<p><b>" + results.rows.item(i).name + "</b></p>";
+                        document.querySelector('#status').innerHTML += msg;
+                    }
+                }, null);
+            });
+
+
+        })();

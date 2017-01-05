@@ -1,0 +1,130 @@
+//
+   Created by liuhong on 2016/9/12.
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        link(rel="stylesheet",href='/bootstrap/css/bootstrap.min.css')
+        link(rel="stylesheet",href='/stylesheets/jenkins.css')
+        link(rel="stylesheet",href='/stylesheets/font-icons.css')
+        script(type='text/javascript', src='/javascripts/jquery-1.10.2.min.js')
+        script(type='text/javascript', src='/bootstrap/js/bootstrap.min.js')
+        script(type='text/javascript',src='/javascripts/jenkins.js')
+
+    body
+        header
+          nav.navbar.navbar-default.navPart(role="navigation")
+              div.container-fluid
+                  div.navbar-header
+                      a.navbar-brand.navLogo Jenkins
+                  ul.nav.navbar-nav
+                      li.nav-item
+                          div.btn-group#download-menu
+                              a.btn.btn-primary.dropdown-toggle.dropdown(data-toggle="dropdown" aria-expanded="true" aria-haspopup="true") Dowbloads
+                              div.dropdown-menu.centered
+                                  div.row
+                                      div.col-md-6.text-xs-center
+                                          h3 LTS Release
+                                          p LTS (Long-Term Support) releases are chosen every 12 weeks from the stream of regular releases as the stable release for that time period.
+                                      div.col-md-6.text-xs-center
+                                          h3 Weekly Release
+                                          p A new release is produced weekly to deliver bug fixes and features to users and plugin developers.
+                                  div.row
+                                      div.col-md-6
+                                          div.btn-group.btn-group2
+                                              a.btn.btn-primary(href="")
+                                                i.icon-box-add
+                                                &nbsp; 2.7.4.war
+                                              button.btn.btn-primary.dropdown-toggle(data-toggle="dropdown" data-trigger="hover" aria-expanded="false" aria-hadpopup="true")
+                                              div.dropdown-menu.dropdown-menu2
+                                                  a.dropdown-item(href="") Docker
+                                                  br
+                                                  a.dropdown-item(href="") FreeBSD
+                                                  br
+                                                  a.dropdown-item(href="") Gentoo
+                                                  br
+                                                  a.dropdown-item(href="") Mac OS X
+                                                  br
+                                                  a.dropdown-item(href="") OpenBSD
+                                                  br
+                                                  a.dropdown-item(href="") openSUSE
+                                                  br
+                                                  a.dropdown-item(href="") Red Hat/Fedora/CentOS
+                                                  br
+                                                  a.dropdown-item(href="") Ubuntu/Debian
+                                                  br
+                                                  a.dropdown-item(href="") Windows
+                                          p
+                                            a(href="") Change
+                                            &nbsp; |
+                                            a(href="") Past Releases
+
+                      li.nav-item
+                          a(href="") Blog
+                      li.nav-item
+                          a(href="") Documentation
+                      li.nav-item
+                          a(href="") Plugins
+                      li.dropdown
+                          a.dropdown-toggle(data-toggle="dropdown" href="") Use-cases
+                          ul.dropdown-menu
+                      li.dropdown
+                          a.dropdown-toggle(data-toggle="dropdown" href="") Participats
+                          ul.dropdown-menu
+                      li.dropdown
+                          a.dropdown-toggle(data-toggle="dropdown" href="") Sub-projects
+                          ul.dropdown-menu
+                      li.dropdown
+                          a.dropdown-toggle(data-toggle="dropdown" href="") Resources
+                          ul.dropdown-menu
+                      li
+                          a(href="") Security
+                      li
+                          a(href="") Press
+                      li
+                          a(href="") Conduct
+
+          section
+             div.captionMain
+                img(src="../images/jen_logo.png")
+                div.textDecoration
+                    h1.title Jenkins
+                    h5.sub-heading Build great things at any scale
+                    p The leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project.
+                button.btn.btn-lg.btn-primary Download Jenkins
+                p.smallMsg Get 2.7.4 LTS .war or the latest 2.21 weekly release
+           div.featured
+               div.fMsg
+                 h3 Register for Jenkins World
+                 p.sub-heading Join the Jenkins community at "Jenkins World" in Santa Clara, California from September 13th - 15th for workshops, presentations and all things Jenkins.
+                 button.btn.btn-primary Learn more
+           div.myDetails
+               div.row
+                   div.col-md-4
+                       i.icon-box1
+                       h3 Continuous Integration and Continuous Delivery
+                       p As an extensible automation server, Jenkins can be used as a simple CI server or turned into the continuous delivery hub for any project.
+                   div.col-md-4
+                       i.icon-box1
+                       h3 Continuous Integration and Continuous Delivery
+                       p As an extensible automation server, Jenkins can be used as a simple CI server or turned into the continuous delivery hub for any project.
+                   div.col-md-4
+                       i.icon-box1
+                       h3 Continuous Integration and Continuous Delivery
+                       p As an extensible automation server, Jenkins can be used as a simple CI server or turned into the continuous delivery hub for any project.
+               div.row
+                   div.col-md-4
+                       i.icon-box1
+                       h3 Continuous Integration and Continuous Delivery
+                       p As an extensible automation server, Jenkins can be used as a simple CI server or turned into the continuous delivery hub for any project.
+                   div.col-md-4
+                       i.icon-box1
+                       h3 Continuous Integration and Continuous Delivery
+                       p As an extensible automation server, Jenkins can be used as a simple CI server or turned into the continuous delivery hub for any project.
+                   div.col-md-4
+                       i.icon-box1
+                       h3 Continuous Integration and Continuous Delivery
+                       p As an extensible automation server, Jenkins can be used as a simple CI server or turned into the continuous delivery hub for any project.
+        footer
+
+

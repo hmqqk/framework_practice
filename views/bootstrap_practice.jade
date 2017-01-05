@@ -1,0 +1,229 @@
+//
+   Created by liuhong on 2016/9/1.
+
+doctype html
+head
+    meta(charset="utf-8")
+    link(rel="stylesheet",href='/bootstrap/css/bootstrap.min.css')
+    link(rel="stylesheet",href='/stylesheets/shipairlift.css')
+    script(type='text/javascript', src='/javascripts/jquery-1.10.2.min.js')
+    script(type='text/javascript', src='/bootstrap/js/bootstrap.min.js')
+    script(type='text/javascript',src='/javascripts/shipairlift.js')
+body
+    div.navbar.navbar-default.navbar-fixed-top
+        div.container
+            div.navbar-header
+                button.navbar-toggle(data-target=".navbar-collapse",data-toggle="collpase",type="button")
+                   span.icon-bar
+                   span.icon-bar
+                   span.icon-bar
+                 a.navbar-brand.navbar-brand-img
+                   img(src="../images/airlift-brand-1.png")
+            div.navbar-collapse.collapse
+                ul.nav.navbar-nav.navbar-left
+                    li
+                      a(href="#how") How it Works
+                    li
+                        a(href="#pricing") Pricing
+                    li
+                        a(href="http://shipairlift.com/blog") Blog
+                ul.nav.navbar-nav.navbar-right
+                    li
+                      a.btn.btn-danger.navbar-btn.link Get Started
+                    li
+                      form
+                          button.btn.btn-default.navbar-btn Login
+    div#headerwrap
+        div.container
+            div.container-main
+                img.grow(src="../images/airlift-mascot.png")
+                h1
+                  b Simple ecommerce shipping & fulfillment.
+                br
+                div.mysearch.hidden-xs
+                    form.form-inline(role="form")
+                        div.input-group
+                            div.input-group-btn
+                                input.form-control.myemail(type="email",required,placeholder="Enter an email address")
+                                span.input-group-btn
+                                    button.btn.btn-danger(type="submit",name="subscribe") Get Early Access &nbsp;>>
+                br
+                div.row
+                    div.col-lg-12
+                        img.img-responsive.center-block(src="../images/airlift-hero-dual.png")
+    div.container
+        div.row.mycentered
+            div.col-lg-8.col-lg-offset-2
+               h2 We store & ship your produce.You focus on your business.
+        div.row.mycentered
+            div.col-lg-4.col-md-4
+                img.img-rounded(src="../images/airlift-store.png")
+                h3 1.We store your inventory
+            div.col-lg-4.col-md-4
+                img.img-rounded(src="../images/airlift-sale.png")
+                h3 2.You make a sale
+            div.col-lg-4.col-md-4
+                img.img-rounded(src="../images/airlift-ship.png")
+                h3 3.We package & ship it
+    hr
+    div.container
+        div.row.mycentered
+            div.col-lg-8.col-lg-offset-2
+                h2 Sync inventory by integrating existing storefronts.
+        ul.list-inline
+            li
+              img(src="../images/ebay.png")
+            li
+                img(src="../images/amazon.png")
+            li
+                img(src="../images/jet.png")
+            li
+                img(src="../images/shopify.png")
+            li
+                img(src="../images/etsy.png")
+            li
+                img(src="../images/woocommerce.png")
+    hr
+    div.container
+        div.row.mycentered
+            div.col-lg-8.col-lg-offset-2
+                h2 Simple pricing that scales as you grow.
+            div.row.mycentered
+                div.col-lg-12.col-md-12
+                    table.table.table-hover.table-bordered.mycentered2
+                        tbody
+                            tr
+                                th Orders per month
+                                th
+                                  img(src="../images/lite.png")
+                                  h3
+                                    strong Lite
+                                  Up to 500
+                                th
+                                  img(src="../images/small.png")
+                                  h3
+                                    strong Small
+                                  Up to 1,000
+                                th
+                                  img(src="../images/medium.png")
+                                  h3
+                                    strong Mdeium
+                                  Up to 5,000
+                                th
+                                  img(src="../images/large.png")
+                                  h3
+                                    strong Large
+                                  Up to 5,0000
+                            tr
+                              td Paxking fees
+                                span.pull-right.badge  ?
+                              td $3
+                              td $2.75
+                              td $2.50
+                              td $1.90
+                            tr
+                              td Pick additional items
+                                span.pull-right.badge ?
+                              td $0.75
+                              td $0.65
+                              td $0.55
+                              td $0.35
+
+                            tr
+                              td Storge fees
+                              td(colspan=4) $0.50 per cubic foot per month.Monthly minumum $25
+                            tr
+                              td Receiving items
+                              td(colspan=4) Always free
+    div.modalStuying.mycentered2
+        button.btn.btn-primary.btn-lg(data-toggle="modal",data-target="#myModal") 开始演示模态框
+        div.modal.fade#myModal(role="dialog",aria-labelledby="myModalLabel",aria-hidden="true",tabindex="-1",data-backdrop="static",keyboard="true")
+            div.modal-dialog
+                div.modal-content
+                    div.modal-header
+                        button.close(data-dismiss="modal",type="button",aria-hidden="true") &times;
+                        h4#myModalLabel.modal-title modal-header
+                    div.modal-body modal-body
+
+                    div.modal-footer
+                        button.btn.btn-default(data-dismiss="modal",type="button") 关闭
+                        button.btn.btn-primary(type="button") 提交更改
+
+    br
+    div
+        nav.navbar.navbar-default.navbar-static.navbar-example(role="navigation")
+            div.container
+                div.navbar-header
+                    a.navbar-brand 我滴实验室
+                div.collapse.navbar-collapse.bs-js-navbar-scrollspy
+                    ul.nav.navbar-nav
+                        li
+                            a(href="#teacher") 导师
+                        li.dropdown
+                            a.dropdown-toggle(href="#friends",data-toggle="dropdown") 室友
+                                b.caret
+                            ul.dropdown-menu
+                                li
+                                    a() 肖秋红
+                                li
+                                    a() 刘小红
+                                li.divider
+                                li
+                                    a 波波师兄
+                                li
+                                    a 方圆师兄
+        div.dropdown-textpart(data-spy="scroll",data-target=".navbar-example",data-offset="100")
+            h4#teacher 导师
+            p 走过春秋岁月，看过人间离合，慢慢的读懂了人生，不再执着于某些事或者情感，慢慢的放慢了脚步，便可以聆听山涧清泉的清澈之音，赏雪开梅园的美丽，品清茶吟宋词的婉约。人生，似一朵花开的芳华，一枚叶落的寂寥，一片雪花的飘逸，最终，寂寞地归入尘埃。生命中的淡雅与清丽，是山河岁月里最艳寂的刹那。而我们，只须和草木相拥，枕花月而眠，静静的，与光阴说禅……用一朵花看世界，世界就在花中；用一颗慈善的心待他人，生活处处是晴空。生活，有悲喜也有得失，却不是全部。人生，有残缺也有遗憾，那也是一种不完整的幸福。拥有一个美丽的心情，看山是山，看水是水。一笑而过，是人生的淡然，也是人生的优雅。心中有爱，莲心渡红尘。身处红尘之中，我们不免会被一些凡事所渲染，被一首歌唤起内心的疼痛，被一朵小花温润心灵。曾几何时，我们做了那最柔情的人，为一片云驻足，为一朵花低眉，为一滴雨感动。曾经的爱恋，曾经的约定，都随着时间的流逝而早已铅华散尽。浅行流年，我们时而会微笑，时而会伤感，时而也会甜蜜。珍惜眼前的幸福，原谅任何伤害与错过。把淡淡的喜忧，轻轻融墨于纸笺，以淡雅的姿态摇曳红尘，在清浅的岁月里低吟浅唱……用简单的心境，对待复杂的人生，生活，是一滴灵动的水。它滴到哪里，就融入哪里，且了无声息，了无痕迹。生活，是平常人家的烟火，它袅袅升起，凝结着世间缕缕动人的温馨。凝一眸碧水涟涟的思念，拈一缕风轻云淡的悠然，于一怀静谧中倾听凡尘的落音，不再奢求什么，做简单的自己，过平淡的人生，有你，便是光阴赐予我的慈悲。窗外阳光正好，喜欢这样的时光，妥帖而又明亮，有鸟鸣，有花香，静静的听听音乐，读读喜欢的文字，从书中获得的智慧，心明朗，则情豁然。展一幅墨晕江南，画一幅北国山川。春来花自青，秋至叶飘零。一花一草的简净，一荣一枯的兴衰，都有淡淡的禅意。慢慢咀嚼，细细品味，就连寂寞的时光，都变成一个人的清欢。一颗多情的心，种下世间万千情愫。每处动人的风景里，都有一段婉约的邂逅；每个叠折的故事中，都有一隅唯美的重逢，宛若灵魂的穿越。云深不知处，花落不沾身……紫陌红尘，我们每个人都是过客，所有的过往都跌落在旧时光里。岁月，教会了我铭记这一路尘风的慈悲，在年华深处，不改初心。经历，让我们更加成熟，不再追求浮华，不再喜好俏丽的颜色，不再渴望热烈的爱情。光阴老了，老在清晨的鸟喧里，老在院落的葡萄架下。惯看众生百态，不愿随波逐流，写安静的字，做简单的人。将盛开与凋零，都看做是人生的一场缘来缘往，都当做是一窗云淡风轻的平常。平凡的人生，需要烟火的味道，这样的味道让人温暖而舒心。做率真独立的自己，惟心真诚使人生彰显珍贵与高尚。俗世的斑斓，人情的寡淡，百味尝遍，冷暖自知。
+            h4#friends 室友
+            p 浩渺如云的光阴里，时光如织，尘缘若梦，落花逐流水，瞬息不可留。缘起，缘尽，早有定数，随心随意生活，得失荣辱皆安于心。心动只是刹那，刹那即是永恒。佛说，这是缘，佛亦说，未止，就会心动。欣赏一个人，隔着遥远的山与水，便是无限的美，只这样远远地欣赏，就够了。平淡的人生，成就了时光的婉约。今生，只愿简单安静的生活，穿棉麻布衣，写温暖的文字，做自己想做的事，和某个良人，一同老去，相约白头。雨后，天空清澈的像一池碧水，葡萄藤下，斑驳的阳光洒在各种盆花上，远处的树枝上有鸟儿在啾啾，我似乎听见心中水流的声响，低眉，眼睛漠然向着那一朵夕颜，也许我没有想念，就像满院的花开，终有一朵入了眉眼。渐行渐远的时光里，那些痛过的、哭过的、都演绎成了坚强。心是一颗树，在缄默中伫立，既能接受阳光，也能包容沧桑。时间在静静流淌，情感在离合，我简单着，质朴着，渐渐的，习惯了花开花谢。生命中，有些遇见，就会铭记；有些刹那，即是永恒。就像墙角那几朵粉色的月季，遇见它正是傍晚，它开的无限美丽，念及它却在每一个清寂与殷实的日子。有时我会羡慕一朵花开，平淡，安然，与世无争。有时也会静静地望着天上的云朵，飘逸，自在，去留无意。一杯茶，一段记忆，还有躺在记忆里的那个人。风起，落瓣满地，被风尘掩埋的记忆也会渐渐清晰。心里装满了想念与慈悲，温暖如你。人生短暂，美丽稍纵即逝。但只要我们用心灵去体味，无论是我们身处人生低谷时得到的一个微笑，还是感到孤独时的一声问候，也无论是我们失落时得到的一个祝福，还是在忧伤时的一份慰藉，都会使我们的心灵得到美的无限享受。 曾经有多少人赞美：人生美丽如花，又有多少人在咏唱：生命灿烂如朝霞。生命因努力而美丽，因坚强而生生不息。
+
+    div
+        ul.nav.nav-tabs.myTab
+            li.active
+              a(href="#factory",data-toggle="tab") 我滴实验室
+            li
+              a(href="#teacher2",data-toggle="tab") 导师
+            li.dropdown
+              a.dropdown-toggle#myTabDrop1(data-toggle="dropdown") 室友
+                b.caret
+              ul.dropdown-menu(role="menu",aria-labelledby="myTabDrop1")
+                  li
+                    a(href="#xiao",data-toggle="tab",tabindex=-1) 肖秋红
+                  li
+                    a(href="#liu",data-toggle="tab",tabindex=-1) 刘小红
+        div.tab-content
+            div.tab-pane.fade.in.active#factory
+                p 走过春秋岁月，看过人间离合，慢慢的读懂了人生，不再执着于某些事或者情感，慢慢的放慢了脚步，便可以聆听山涧清泉的清澈之音，赏雪开梅园的美丽，品清茶吟宋词的婉约。人生，似一朵花开的芳华，一枚叶落的寂寥，一片雪花的飘逸，最终，寂寞地归入尘埃。生命中的淡雅与清丽，是山河岁月里最艳寂的刹那。而我们，只须和草木相拥，枕花月而眠，静静的，与光阴说禅……
+            div#teacher2.tab-pane.fade
+                p 用一朵花看世界，世界就在花中；用一颗慈善的心待他人，生活处处是晴空。生活，有悲喜也有得失，却不是全部。人生，有残缺也有遗憾，那也是一种不完整的幸福。拥有一个美丽的心情，看山是山，看水是水。一笑而过，是人生的淡然，也是人生的优雅。
+            div.tab-pane.fade#friends2
+                p 心中有爱，莲心渡红尘。身处红尘之中，我们不免会被一些凡事所渲染，被一首歌唤起内心的疼痛，被一朵小花温润心灵。曾几何时，我们做了那最柔情的人，为一片云驻足，为一朵花低眉，为一滴雨感动。曾经的爱恋，曾经的约定，都随着时间的流逝而早已铅华散尽。浅行流年，我们时而会微笑，时而会伤感，时而也会甜蜜。珍惜眼前的幸福，原谅任何伤害与错过。把淡淡的喜忧，轻轻融墨于纸笺，以淡雅的姿态摇曳红尘，在清浅的岁月里低吟浅唱……
+            div.tab-pane.fade#xiao
+                p 用简单的心境，对待复杂的人生，生活，是一滴灵动的水。它滴到哪里，就融入哪里，且了无声息，了无痕迹。生活，是平常人家的烟火，它袅袅升起，凝结着世间缕缕动人的温馨。凝一眸碧水涟涟的思念，拈一缕风轻云淡的悠然，于一怀静谧中倾听凡尘的落音，不再奢求什么，做简单的自己，过平淡的人生，有你，便是光阴赐予我的慈悲。
+            div.tab-pane.fade#liu
+                p 窗外阳光正好，喜欢这样的时光，妥帖而又明亮，有鸟鸣，有花香，静静的听听音乐，读读喜欢的文字，从书中获得的智慧，心明朗，则情豁然。展一幅墨晕江南，画一幅北国山川。春来花自青，秋至叶飘零。一花一草的简净，一荣一枯的兴衰，都有淡淡的禅意。慢慢咀嚼，细细品味，就连寂寞的时光，都变成一个人的清欢。
+    div.paned-group#accordion
+        div.panel.panel-default
+            div.panel-heading
+                h4.panel-title
+                  a(data-toggle="collapse",data-parent="#accordion",href="#collapseOne") 我滴实验室
+            div.panel-collapse.collapse.in#collapseOne
+                div.panel-body 生命中，有些遇见，就会铭记；有些刹那，即是永恒。就像墙角那几朵粉色的月季，遇见它正是傍晚，它开的无限美丽，念及它却在每一个清寂与殷实的日子。有时我会羡慕一朵花开，平淡，安然，与世无争。有时也会静静地望着天上的云朵，飘逸，自在，去留无意。一杯茶，一段记忆，还有躺在记忆里的那个人。风起，落瓣满地，被风尘掩埋的记忆也会渐渐清晰。心里装满了想念与慈悲，温暖如你。
+
+    div.mycentered2
+        h4.blink LiuHong is studying &nbsp;
+           span#typed-cursor |
+    div.make-animation
+        div.container
+            div.row
+                div.col-sm-12.fadeIn.animated
+                    h2.mycentered2 ~渐缓出现的动画~
+                    div.fadeInUp.animated
+                        span
+            div.row
+                div.col-sm-7.fadeInLeft.animated
+                    h3 浩渺如云的光阴里，时光如织，尘缘若梦，落花逐流水，瞬息不可留。缘起，缘尽，早有定数，随心随意生活，得失荣辱皆安于心。心动只是刹那
+                div.col-sm-5.fadeInUp.animated
+                    img(src="../images/TripAdvisor.png")
+    div.myfooter
