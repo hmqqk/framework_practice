@@ -1,0 +1,127 @@
+nav{
+    margin:0 !important;
+    border:0 !important;
+    border-radius:0 !important;
+}
+.navbar-brand.navLogo{
+    color:#fff;
+}
+.navPart{
+    background:#000000;
+}
+.navbar-nav{
+    color:white;
+}
+.btn-group{
+    padding:8px 16px;
+}
+.btn-primary{
+    background:#D24939;
+    border:0;
+}
+.smallMsg{
+    position:relative;
+    padding:5px;
+    margin-top:30px;
+    left:100px;
+}
+.dropdown-toggle::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-right: .25rem;
+    margin-left: .25rem;
+    vertical-align: middle;
+    content: "";
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-left: .3em solid transparent;
+}
+section{
+    background:#168BB9;
+}
+.captionMain{
+    color:white;
+    width:620px;
+    margin:0 auto;
+    padding-top:30px;
+}
+.captionMain img{
+    float:left;
+    margin-right:15px;
+}
+.textDecoration{
+    width:450px;
+    padding-bottom:40px;
+}
+h1.title{
+    margin:0 0 5px 0;
+    font-size:60px;
+    color:white;
+}
+.dropdown-menu{
+    color:gray;
+    background:white;
+    width:734px;
+}
+p{
+    margin:0;
+}
+
+.btn-group:hover>.dropdown-menu2 {
+    display: block;
+}
+
+.centered{
+    text-align:center;
+}
+
+.btn-group2{
+    padding:0;
+}
+.sub-heading{
+    font-size:18px;
+    padding-bottom:20px;
+}
+/*   */
+.featured{
+    background:url(../images/jenkinsworld_jumbotron_faded.png) no-repeat 0 0;
+    background-size:cover;
+    width:100%;
+    height:260px;
+    color:white;
+    box-shadow: inset rgba(0, 0, 0, .33) 0 20rem 9rem -9rem, inset rgba(0, 0, 0,.25) 0 26rem;
+}
+.fMsg{
+    width:645px;
+    margin:0 auto;
+    padding:40px 40px;
+}
+.myDetails{
+    background-color:white;
+    width:1200px;
+    margin:40px auto;
+}
+.icon-box1{
+    content: ' ';
+    display: block;
+    width:52px;
+    height:52px;
+    left:0;
+    top:27px;
+    background-color:#168bb9;
+    position:absolute;
+    border-radius:50%;
+    line-height:52px;
+}
+.icon-box1:before {
+    content: "\e600";
+    position:relative;
+    top:18px;
+}
+.col-md-4{
+    padding-left:65px;
+    text-align:center;
+}
+
+

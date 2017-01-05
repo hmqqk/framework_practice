@@ -1,0 +1,77 @@
+
+/*base part*/
+*{margin:0;padding:0;}
+
+.title{
+    padding-top:20px;
+    text-align:center;
+    font-weight:bold;
+}
+.loginMsgdiv{
+    position:relative;
+    width:500px;
+    margin:20px auto;
+}
+
+.loginInput > label{
+    display:inline-block;
+    width:150px;
+    height:40px;
+    text-align:right;
+    padding:10px;
+    line-height:40px;
+}
+.loginInput > input{
+    width:262px;
+    height:38px;
+    border:1px solid #C4C3C3;
+    border-radius:5px;
+    -webkit-box-shadow:inset 0 0 5px #C4C3C3;
+    -moz-box-shadow:inset 0 0 5px #C4C3C3;
+    box-shadow:inset 0 0 5px #C4C3C3;
+}
+#doLogin,#doLogin2{
+    position:relative;
+    left:170px;
+    width:120px;
+    height:40px;
+    background:#FFCC19;
+    border:none;
+    border-radius:3px;
+    font-size:16px;
+    color: #A33300;
+
+}
+
+#doLogin{
+    margin:20px 5px 40px 0;
+}
+
+
+.left,.right{
+    position:relative;
+    width:200px;
+    height:200px;
+    border:1px solid #000000;
+    margin:20px auto;
+}
+
+.right img{
+    width:40px;
+    height:20px;
+}
+#status{
+    width:300px;
+    height:150px;
+    box-shadow: 0px 0px 3px #dfdfdf inset;
+    margin:20px auto;
+    font: 12px arial;
+    text-align:center;padding:10px;
+}
+.mixture{
+    background:url(../images/bg1.jpg),url(../images/bg2.jpg) no-repeat 0 0 ;
+    width:600px;
+    height:1000px;
+    margin:10px auto;
+    background-blend-mode: screen,multiply;
+}
