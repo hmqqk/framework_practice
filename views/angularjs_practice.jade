@@ -1,0 +1,94 @@
+//
+   Created by liuhong on 2016/9/4.
+doctype html
+html(ng-app="smartisan" ng-init="loginText='登录';flag=false")
+    head
+        meta(charset="utf-8")
+        link(rel="stylesheet",href='/stylesheets/smartisan.css')
+    body
+        div.wrapper
+            header(ng-controller="NavCtrl" ng-include="'smartisan_header'")
+            div.content(ng-controller="ContentCtrl")
+                div.nav-content
+                    ul
+                        li
+                           a(ng-bind-template="{{special}}" href="")
+                        li
+                            a(ng-bind-template="{{mobile}}" href="")
+                        li
+                            a(href="") 耳机/音响
+                        li
+                            a(href="") 贝壳/保护套
+                        li
+                            a(href="") "情怀"贝壳
+                        li
+                            a(href="") 其它周边
+                        li
+                            a(href="") 保修服务
+                        li
+                            a(href="") 全部商品
+                    div.shop_car(ng-mouseover="flag=true" ng-mouseleave="flag=false")
+                        a(href="")
+                        span 购物车
+                        span(ng-bind-html="car_nums")
+                    div.shop_items(ng-show="flag")
+                        p 这是您的购物车哟！！
+                    div.clear
+                    div.placeholder
+                        img(src="../images/placeholder.png")
+                    div.nav_tabs
+                       a(ng-href="")
+                          h4 Smartisan T2
+                          p 以傲慢与偏执回敬傲慢与偏见
+                          img(src="images/nav_tabs.png")
+                        a(href="")
+                            h4 Smartisan T2
+                            p 以傲慢与偏执回敬傲慢与偏见
+                            img(src="images/nav_tabs.png")
+                        a(href="")
+                            h4 Smartisan T2
+                            p 以傲慢与偏执回敬傲慢与偏见
+                            img(src="images/nav_tabs.png")
+                        a.no-border(href="")
+                            h4 Smartisan T2
+                            p 以傲慢与偏执回敬傲慢与偏见
+                            img(src="images/nav_tabs.png")
+                    footer
+                        div.smartisan_footer
+                            p footer part ...
+
+
+
+
+script(src="/javascripts/jquery-1.10.2.min.js")
+script(src="/javascripts/angular-1.2.5.js")
+script(src="/javascripts/angular-sanitize.min.js")
+script.
+    (function () {
+        var app = angular.module("smartisan", []);
+        app.controller("NavCtrl", function ($scope, $http, $element) {
+            $http.get("/javascripts/menu.json")
+                    .success(function (result) {
+                        $scope.menus = result;
+                    });
+
+        })
+           .controller("styleCtrl",function($scope){
+             $scope.navLogin={display:'inline-block',width:98,height:26,color:'#FFF',background:'#111',border: '1px solid #2E2E2E'
+                                ,borderRadius: 4,textAlign:'center',lineHeight:'26px',fontSize:12,opacity:0.8,cursor:'pointer'};
+             $scope.login=function(){
+                 alert("稍等哟，马上进入登录界面！");
+             }
+                })
+                .controller("ContentCtrl",function($scope){
+                    $scope.car_nums="<b>0</b>";
+                    $scope.special="精选";
+                    $scope.mobile="手机";
+                })
+    })();
+
+
+script(src="/javascripts/smartisan.js")
+
+
+
