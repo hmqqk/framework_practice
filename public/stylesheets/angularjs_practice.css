@@ -140,6 +140,7 @@ li.active a{
     margin:0 auto;
     border:1px solid gray;
     border-radius:5px;
+    background:#fff;
 }
 .nav_tabs a{
     position:relative;
