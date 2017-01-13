@@ -10,6 +10,8 @@ There are various of practices of making web pages using page techniques like bo
 <img src="Readme_images/bootstrap_practice2.png">
 <p> angularjs_practice page</p>
 <img src="Readme_images/angularjs_practice.png">
+<p> jqueryMobile_practice page</p>
+<img src="Readme_images/jqueryMobile_practice.png">
 <p> html_practice page</p>
 <img src="Readme_images/html_practice.png">
 <p> css_practice page</p>
